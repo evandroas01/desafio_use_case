@@ -24,6 +24,7 @@ const MockRepository = () => {
 describe("Unit test create customer use case", () => {
     it("Should create a customer", async () => {
         const customerRepository = MockRepository();
+        // @ts-ignore
         const customerCreateUseCase = new CreateCustomerUsecase(customerRepository);
 
         const output = await customerCreateUseCase.execute(input);
@@ -42,6 +43,7 @@ describe("Unit test create customer use case", () => {
 
     it('should thrown an error when name is missing', async () => {
         const customerRepository = MockRepository();
+        // @ts-ignore
         const customerCreateUseCase = new CreateCustomerUsecase(customerRepository);
 
         input.name = "";
@@ -51,6 +53,7 @@ describe("Unit test create customer use case", () => {
 
     it('should thrown an error when street is missing', async () => {
         const customerRepository = MockRepository();
+        // @ts-ignore
         const customerCreateUseCase = new CreateCustomerUsecase(customerRepository);
 
         input.address.street = "";

@@ -2,7 +2,7 @@ export interface InputCreateCustomerDto {
     name: string,
     address: {
         street: string,
-        number: string,
+        number: number,
         zip: string,
         city: string,
     };
@@ -13,7 +13,7 @@ export interface OutputCreateCustomerDto {
     name: string,
     address: {
         street: string,
-        number: string,
+        number: number,
         zip: string,
         city: string,
     };

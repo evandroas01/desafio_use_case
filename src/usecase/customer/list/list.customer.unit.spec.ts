@@ -32,7 +32,7 @@ const MockRepository = () => {
 };
 
 describe("Unit test for listing customer use case", () => {
-    it('should  list a customer', () => {
+    it('should  list a customer', async () => {
         const repository = MockRepository();
         const useCase = new ListCustomerUseCase(repository);
         const output = await useCase.execute({});

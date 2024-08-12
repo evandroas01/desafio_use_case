@@ -10,6 +10,7 @@ export default class FindCustomerUsecase {
      async execute(input: InputFindCustomerDto): Promise<OutputFindCustomerDto>{
          const customer = await this.customerRepository.find(input.id);
 
+         // @ts-ignore
          return {
              id: customer.id,
              name: customer.name,
